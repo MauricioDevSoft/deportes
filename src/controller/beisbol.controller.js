@@ -1,10 +1,10 @@
-import { Beisbol } from "../models/beisbol.js";
+import { Deporte } from "../models/deporte.js";
 
-export class BeisbolController {
+export class DeporteController {
     Crear = async (req, res) => {
         try {
-            const beisbol = await Beisbol.create(req.body);
-            return res.status(200).json(beisbol);
+            const deporte = await Deporte.create(req.body);
+            return res.status(200).json(deporte);
         } catch (error) {
             return res.status(500).json(error);
         }
@@ -12,8 +12,8 @@ export class BeisbolController {
 
     GetAll = async (req, res) => {
         try {
-            const beisbol = await Beisbol.findAll();
-            return res.status(200).json(beisbol);
+            const deporte = await Deporte.findAll();
+            return res.status(200).json(deporte);
         } catch (error) {
             return res.status(500).json(error);
         }
@@ -21,8 +21,8 @@ export class BeisbolController {
 
     GetOne = async (req, res) => {
         try {
-            const beisbol = await Beisbol.findByPk(req.params.id);
-            return res.status(200).json(beisbol);
+            const deporte = await Deporte.findByPk(req.params.id);
+            return res.status(200).json(deporte);
         } catch (error) {
             return res.status(500).json(error);
         }
@@ -30,10 +30,10 @@ export class BeisbolController {
 
     Update = async (req, res) => {
         try {
-            const beisbol = await Beisbol.update(req.body, {
+            const deporte = await Deporte.update(req.body, {
                 where: { id: req.params.id },
             });
-            return res.status(200).json(beisbol);
+            return res.status(200).json(deporte);
         } catch (error) {
             return res.status(500).json(error);
         }
@@ -41,10 +41,10 @@ export class BeisbolController {
 
     Delete = async (req, res) => {
         try {
-            const beisbol = await Beisbol.destroy({
+            const deporte = await Deporte.destroy({
                 where: { id: req.params.id },
             });
-            return res.status(200).json(beisbol);
+            return res.status(200).json(deporte);
         } catch (error) {
             return res.status(500).json(error);
         }

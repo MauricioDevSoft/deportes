@@ -1,7 +1,7 @@
 import { sequelize } from "../db/db.js";
 import { DataTypes } from "sequelize";
 
-export const Futbol = sequelize.define("futbol", {
+export const Deporte = sequelize.define("deporte", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -12,6 +12,18 @@ export const Futbol = sequelize.define("futbol", {
         allowNull: false,
     },
     respuesta: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    deporte: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    nombre: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    apellido: {
         type: DataTypes.STRING,
         allowNull: false,
     },

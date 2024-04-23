@@ -1,8 +1,6 @@
 import express from "express";
-import basket from "./src/routes/basket.routes.js";
-import americano from "./src/routes/americano.routes.js";
-import beisbol from "./src/routes/beisbol.routes.js";
-import futbol from "./src/routes/futbol.routes.js";
+
+import deporte from "./src/routes/futbol.routes.js";
 import { sequelize } from "./src/db/db.js";
 
 const app = express();
@@ -23,10 +21,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use("/api/basket", basket);
-app.use("/api/americano", americano);
-app.use("/api/beisbol", beisbol);
-app.use("/api/futbol", futbol);
+app.use("/api/deporte", deporte);
 
 sequelize
     .sync({ force: false, alter: false })
