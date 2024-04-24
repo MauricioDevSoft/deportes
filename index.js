@@ -1,6 +1,7 @@
 import express from "express";
 
 import deporte from "./src/routes/futbol.routes.js";
+import correo from "./src/routes/corre.routes.js";
 import { sequelize } from "./src/db/db.js";
 
 const app = express();
@@ -22,7 +23,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/deporte", deporte);
-
+app.use("/api/correo", correo);
 sequelize
     .sync({ force: false, alter: false })
     .then(() => {
