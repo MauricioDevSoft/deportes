@@ -9,22 +9,17 @@ export const Deporte = sequelize.define("deporte", {
     },
     numPregunta: {
         type: DataTypes.INTEGER,
-        allowNull: false,
     },
     respuesta: {
         type: DataTypes.STRING,
-        allowNull: false,
     },
     deporte: {
         type: DataTypes.STRING,
-        allowNull: false,
     },
     nombre: {
         type: DataTypes.STRING,
-        allowNull: false,
     },
     apellido: {
         type: DataTypes.STRING,
-        allowNull: false,
     },
 });

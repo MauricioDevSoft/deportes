@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Respuestas de Encuesta</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            /* Estilo personalizado para el marco */
+            .custom-border {
+                border: 2px solid #007bff; /* Cambia el color del borde según sea necesario */
+                border-radius: 10px; /* Ajusta el radio de borde según sea necesario */
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <div class="custom-border">
+            <div class="row">
+                <div class="col">
+                    <div class="py-3">
+                        <h1 class="text-center">Encuesta de:</h1>
+                        <h2 class="text-center">
+                            <%= nombre %> <%= apellido %>
+                        </h2>
+                    </div>
+                        <h2 class="mb-4">Respuestas:</h2>
+                        <ul class="list-group">
+                            <% respuestas.forEach(function(respuesta)
+                            { %>
+                            <li class="list-group-item">
+                                <h3 class="mb-1">
+                                    Pregunta <%= respuesta.numPregunta
+                                    %>:
+                                </h3>
+                                <p class="fw-light">
+                                    <%= respuesta.Pregunta %>
+                                </p>
+                                <p>
+                                    Respuesta: <%= respuesta.respuesta
+                                    %>
+                                </p>
+                            </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
