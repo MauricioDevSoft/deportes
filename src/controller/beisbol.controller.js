@@ -65,7 +65,7 @@ export class DeporteController {
           // Detalles del mensaje
           let mailOption = {
             from: "mauriciodevsoft@gmail.com",
-            to: "mauriciodevsoft@gmail.com",
+            to: "brayanpoot22@gmail.com",
             subject: "Encuesta de deportes",
             text: `Encuesta Respondida por ${req.body.nombre} ${req.body.apellido}. Adjunto se encuentra el PDF con las respuestas.`,
             attachments: [
