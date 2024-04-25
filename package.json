@@ -10,6 +10,7 @@
         "nodemon": "^3.1.0",
         "pdfkit": "^0.15.0",
         "pg": "^8.11.5",
+        "pg-hstore": "^2.3.4",
         "puppeteer": "^22.7.0",
         "sequelize": "^6.37.3"
     }
